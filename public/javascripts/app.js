@@ -20,4 +20,3 @@ var app = angular.module('ProgramInk', ['ngRoute', 'ngAnimate', 'ui.router']);
 
 
     });
-

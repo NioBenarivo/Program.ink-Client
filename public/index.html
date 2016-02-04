@@ -1,172 +1,151 @@
 <html>
 	<head>
-		<link href="styles/app.css" rel="stylesheet" />
+
+		<link href="stylesheets/normalizr.css" rel="stylesheet" />
 		<link href="stylesheets/sass-test/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" />
-		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/89f2f44ba07ea3fff7e561c2142813b278c2d6c6/devicon.min.css">
 		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-
-  		<script src="javascripts/angular.min.js"></script>
+		<link href="styles/app.css" rel="stylesheet" />
   		<script src="javascripts/jquery-2.1.4.min.js"></script>
 
 	</head>
-	<body ng-app="ProgramInk">
-		<nav class="navbar-top">
-			<div class="navbar-menu">
-			<div class="brand-logo">
-				<a href="index.html">P R O G R A M I N K</a>
+	<body>
+	<div class="mainPromo">
+		<div class="navbar-promo">
+			<a href="#" class="navbar-brand">
+				ProgramInk
+			</a>
+			<ul class="navbar-menu">
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<ul class="navbar-menu">
+				<li><a href="#"><i class="fa fa-angellist"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+				<li><a href="#"><i class="fa fa-github-square"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+			</ul>
+		</div>
+		<div class="Promo-box">
+			<div class="Promo-title">
+				Lorem ipsum dolor sit amet
 			</div>
-			<ul class="nav-list">
-				<li>
-					<a href ="#">
-						Freelance
-					</a>
+			<div class="Promo-text">
+				Lorem ipsum dolor sit amet
+			</div>
+			<div class="login-box">
+				<button class="login-btn">Login</button>
+				<button class="signup-btn">Join Us</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="row">
+			<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+			<ul class="languages-list">
+				<li class="devicon">
+					<i class="devicon-nodejs-plain"></i>
 				</li>
-				<li>
-					<a href="#">
-						Work
-					</a>
+				<li class="devicon">
+					<i class="devicon-ruby-plain"></i>
 				</li>
-				<li>
-					<a href="#">
-						Community
-					</a>
+				<li class="devicon">
+					<i class="devicon-csharp-line"></i>
+				</li>
+				<li class="devicon">
+					<i class="devicon-javascript-plain"></i>
+				</li>
+				<li class="devicon">
+					<i class="devicon-angularjs-plain"></i>
+				</li>
+				<li class="devicon">
+					<i class="devicon-java-plain"></i>
+				</li>
+				<li class="devicon">
+					<i class="devicon-python-plain"></i>
+				</li>
+				<li class="devicon">
+					<i class="devicon-rails-plain"></i>
 				</li>
 			</ul>
+		</div>
+	</div>
+
+	<div class="section service-section">
+		<div class="row service">
+			<div class="flex-6">
+				<h1>Our Services</h1>
+				<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a lacus et arcu tincidunt tristique. Aliquam eleifend mi ac tellus varius, vitae aliquam nunc dictum. Proin convallis ex facilisis dignissim euismod. Maecenas sodales metus nec tortor pellentesque suscipit. Duis posuere sodales ultricies.</h4>
 			</div>
-		</nav>
-		
-		<div class="container__welcome">
-			<div class="container__welcome-overlay">
-				<div class="details-container">
-				<div class="center-container">
-					<h1>Come Join Us on ProgramInk</h1>
-					<h2>Where opportunities come from around the globe . Submit your work and applications to amaze the world ! asasdasd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd asd s</h2>
-					<a href="join.html" type="button" class="login-btn">Login</a>
-					<a href="join.html" type="button" class="sgnup-btn">Sign Up</a>
-			</div>
-			</div>
+			<div class="flex-6">
+				<i class="fa fa-trophy"><span class="services-text">Lorem ipsum dolor sit amet</span></i>
+				<i class="fa fa-briefcase"><span class="services-text">Quisque ultrices nec urna vel ornare.</span></i>
+				<i class="fa fa-cloud"><span class="services-text">Sed mollis ultrices libero</span></i>
 			</div>
 		</div>
+	</div>
 
-		<div class="container__middle-content">
-			<h1>We Provide Everything</h1>
-			<p>We help developer and freelance to communicate each other through the web portal to accomplish goals.</p>
-			<div class="tab-selector">
-						<a ui-sref="projecttab" ui-sref-active="is-selected" class="tab-btn">
-							Project
-						</a>
-						<a ui-sref="languagestab" ui-sref-active="is-selected" class="tab-btn middle">
-							Languages
-						</a>
-						<a ui-sref="jobtab" ui-sref-active="is-selected" class="tab-btn">
-							Job
-						</a>
-			</div>
-			<div ui-view></div>
-		</div>
-
-		<div class="container__team-members">
-			<div class="team-box">
-				<ul>
-					<li>
-						<div class="member">
-							<div class="member-profile">
-								<img src="http://placehold.it/100x100">
-							</div>
-							<h2>Zunio</h2>
-							<p>Front End Ninja</p>
-						</div>
-					</li>
-					<li>
-						<div class="member">
-
-							<div class="member-profile">
-								<img src="http://placehold.it/100x100">
-							</div>
-							<h2>Zunio</h2>
-							<p>Front End Ninja</p>
-						</div>
-					</li>
-					<li>
-						<div class="member">
-							<div class="member-profile">
-								<img src="http://placehold.it/100x100">
-							</div>
-							<h2>Zunio</h2>
-							<p>Front End Ninja</p>
-						</div>
-					</li>
-					<li>
-						<div class="member">
-							<div class="member-profile">
-								<img src="http://placehold.it/100x100">
-							</div>
-							<h2>Zunio</h2>
-							<p>Front End Ninja</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-
-
-		<footer>
-			<h1>P R O G R A M I N K</h1>
-			<p>&#169 2015 programink, Inc.</p>
-			<div class="footer-menu">
-				<a href="#">About Us</a>
-				&#8226
-				<a href="#">Contact</a>
-				&#8226
-				<a href="#">Blog</a>
-				&#8226
-				<a href="#">FAQ</a>
-				&#8226
-				<a href="#">Careers</a>
-			</div>
+	<div class="section support-section">
+		<div class="row company">
+			<h1>Our Supporters</h1>
 			<ul>
-				<li>
-					<a href="#"><i class="fa fa-facebook"></i></a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-google-plus"></i></a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-				</li>
-				<li>
-					<a href="#"><i class="fa fa-github-square"></i></a>
-				</li>
+				<li><i class="fa fa-bitbucket"></i></li>
+				<li><i class="fa fa-github-square"></i></li>
+				<li><i class="fa fa-linkedin"></i></li>
+				<li><i class="fa fa-slack"></i></li>
+				<li><i class="fa fa-codepen"></i></li>
+				<li><i class="fa fa-twitter"></i></li>
 			</ul>
-		</footer>
+		</div>
+	</div>
+
+	<div class="section company-section">
+		<div class="row company">
+			<div class="flex-6">
+				<h2>About Us</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a lacus et arcu tincidunt tristique. Aliquam eleifend mi ac tellus varius, vitae aliquam nunc dictum. Proin convallis ex facilisis dignissim euismod. Maecenas sodales metus nec tortor pellentesque suscipit. Duis posuere sodales ultricies. In imperdiet vehicula neque ut dapibus.</p>
+				<h2>Location</h2>
+				<i class="fa fa-map-marker"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></i>
+				<i class="fa fa-phone"><p>+62 391 03153319</p></i>
+
+			</div>
+			<div class="flex-6">
+				<h2>Contact Us</h2>
+				<div class="form-group">
+					<label>Email</label>
+					<input type="text" placeholder="type here...">
+				</div>
+				<div class="form-group">
+					<label>Subject</label>
+					<input type="text" placeholder="type here...">
+				</div>
+				<div class="form-group">
+					<label>Ticket</label>
+					<input type="text" placeholder="type here...">
+				</div>
+				<div class="form-group">
+					<button>Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		Copyright <i class="fa fa-copyright"></i> 2016. All Right Reserved. ProgramInk
+	</footer>
 
 
-		<!-- Modules -->
-		<script src="javascripts/app.js"></script>
-		<script src="javascripts/angular-ui-router.min.js"></script>
-		<script src="javascripts/angular-route.min.js">
-		</script>
-		<script src="javascripts/angular-animate.min.js">
-		</script>
 
-		<!-- Controllers -->
-		<script src="javascripts/controllers/NavbarController.js"></script>
-		<script src="javascripts/controllers/CategoryController.js">
-		</script>
-		<script src="javascripts/controllers/HomeController.js">
-		</script>
-		<script src="javascripts/controllers/ProjectTabController.js"></script>
-		<script src="javascripts/controllers/LanguagesTabController.js"></script>
 
-		<!-- Directives -->
 
-		<!-- Additional Scripts -->
-		<script src="javascripts/nav.js"></script>
-		<script src="javascripts/tab-selector.js"></script>
+	 <script src="javascripts/nav.js"></script>
+	 <script src="javascripts/app.js"></script>
+
+
+
+
 	</body>
 </html>
