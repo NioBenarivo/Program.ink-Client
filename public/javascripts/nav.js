@@ -31,4 +31,14 @@ $(document).ready(function(){
 		$(this).addClass('is-active');
 	});
 
+	$('.mail-tab li').on('click', function(){
+		$('li.active').removeClass('active');
+		$(this).addClass('active');
+	});
+
+	$('.contact-panel ul li').on('click', function(){
+		$('li.is-selected').removeClass('is-selected');
+		$(this).addClass('is-selected');
+	});
+
 });

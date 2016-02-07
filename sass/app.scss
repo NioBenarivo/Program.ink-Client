@@ -1,17 +1,6 @@
-
-$white-color: #FFFFFF;
-$primary-color: #63ADF2;
-$secondary-color: #53DD6C;
-$yellow-color: #FFE74C;
-$gray-color: #A0A0A0;
-$trans-color: #D2D1D2;
-$dark-color: #1B1B1E;
-$darken-color: #0B0B0E;
-$background-cover-color: rgba(0,0,0,0.6);
-
-
-
-
+@import 'partials/_colors.scss';
+@import 'partials/_dropzone.scss';
+@import 'partials/_anim-in-out.scss';
 
 body{
   font-family: 'Montserrat', sans-serif;
@@ -673,11 +662,163 @@ ul{
     }
 }
 
+.mail-tab{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 3em;
+    text-align: center;
+    li{
+      display: flex;
+      align-self: flex-start;
+      flex-basis: 100%;
+      color: $white-color;
+      background-color: #FAFAFA;
+      transition: 0.2s ease-in-out;
+      @media screen and (min-width: 1200px){
+        flex-basis: 20%;
+      }
+      &:hover{
+        background-color: $primary-color;
+        a{
+          color: $white-color;
+        }
+      }
+      &.active{
+        background-color: $primary-color;
+        a{
+          color: $white-color;
+        }
+      }
+      a{
+        padding: 2em;
+        color: $gray-color;
+        text-decoration: none;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        cursor:pointer;
+      }
+    }
+}
+
 .mailbox{
-  height: 400px;
-  width: 400px;
+  height: 700px;
+  width: 100%;
   border-bottom: 3px solid $primary-color;
   border-left: 3px solid $primary-color;
   border-right: 3px solid $primary-color;
+  border-top: 3px solid $primary-color;
+  .contact-panel{
+    float: left;
+    width: 20%;
+    height: 100%;
+    border-right: 3px solid $primary-color;
+    ul{
+      padding: 0;
+      margin: 0;
+      overflow: auto;
+      height: 100%;
+      li{
+        list-style: none;
+        &:hover{
+          background-color: #FAFAFA;
+        }
+        &.is-selected{
+          background-color: #FAFAFA;
+        }
+        a{
+          padding: 1em;
+          cursor: pointer;
+          text-decoration: none;
+          display: block;
+        }
+        .msg-profile{
+          position: relative;
+          img{
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
+        .msg-inbox{
+          padding-left: 70px;
+          position: relative;
+          header{
+            font-size: 1.3em;
+            display: block;
+            color: $dark-color;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .description{
+            color: $gray-color;
+            opacity: 0.4;
+            font-size: 1em;
+            padding: 0;
+            margin: 0;
+          }
+          .time-desc{
+            color: $primary-color;
+            font-weight: 800;
+          }
+        }
+      }
+    }
+  }
+
+  .content-panel{
+    float: right;
+    width: 80%;
+    height: 100%;
+    padding: 1em;
+  }
+  input[type='text']{
+      width: 100%;
+      font-size: 1.2em;
+      border: none;
+      padding: 0.5em;
+      border-bottom: 1px solid $primary-color;
+      margin:0 auto;
+      outline: none;
+      background: Transparent;
+      color: $dark-color;
+      margin-bottom: 1em;
+  }
+  textarea{
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.2em;
+    padding: 0.5em;
+    background: Transparent;
+    resize: none;
+    height:400px;
+    overflow: auto;  
+  }
+
+  .compose__message{
+    padding: 1.5em;
+    button{
+      width: 100%;
+      padding: 1.5em;
+      outline: none;
+      border: 3px solid $primary-color;
+      background-color: Transparent;
+      color: $primary-color;
+      transition: 0.2s ease-in-out;
+      &:hover{
+        background-color: $primary-color;
+        color: $white-color;
+      }
+    }
+  }
 }
-@import 'partials/_dropzone.scss';
+
+

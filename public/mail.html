@@ -8,7 +8,9 @@
 		<link href="styles/app.css" rel="stylesheet" />
   		<script src="javascripts/jquery-2.1.4.min.js"></script>
   		<script src="javascripts/dropzone.min.js"></script>
-  		<script src="javascripts/nav.js"></script>
+
+	    <script src="javascripts/nav.js"></script>
+
 
 	</head>
 	<body class="in-app">
@@ -22,13 +24,16 @@
 				<a href="#" title="Jobs" class="tooltip"><i class="fa fa-briefcase"></i></a>
 			</li>
 			<li>
-				<a href="#" title="Gallery" class="tooltip"><i class="fa fa-archive"></i></a>
+				<a href="gallery.html" title="Gallery" class="tooltip"><i class="fa fa-archive"></i></a>
 			</li>
 			<li class="is-active">
-				<a href="#" title="Mail" class="tooltip"><i class="fa fa-envelope"></i></a>
+				<a href="mail.html" title="Mail" class="tooltip"><i class="fa fa-envelope"></i></a>
 			</li>
 			<li>
 				<a href="#" title="Profile" class="tooltip"><i class="fa fa-user"></i></a>
+			</li>
+			<li>
+				<a href="#" title="Upload" class="tooltip"><i class="fa fa-plus"></i></a>
 			</li>
 			<li class="exit-menu">
 				<a href="#" title="Logout" class="tooltip"><i class="fa fa-sign-out"></i></a>
@@ -36,7 +41,7 @@
 		</ul>
 	</nav>
 
-	<div class="section">
+	<div class="section"  ng-app="routerApp">
 		<div class="row gallery-section">
 			<div class="page-header">
 				<header>Mail</header>
@@ -46,11 +51,30 @@
 					<i class="fa fa-search" id="search_submit"></i>
 				</div>
 			</div>
+			<ul class="mail-tab">
+				<li class="active">
+					<a ui-sref="inbox">Inbox</a>
+				</li>
+				<li>
+					<a ui-sref="sent">Sent</a>
+				</li>
+				<li>
+					<a ui-sref="compose">Compose</a>
+				</li>
+			</ul>
 			<div class="mailbox">
-				<span></span>
+				<div ui-view class="anim-in-out anim-slide-below-fade" data-anim-sync="true" data-anim-speed="1000"></div>
 			</div>
 		</div>
 	</div>
 
+	<!-- MODULES -->
+		<script src="javascripts/angular.min.js"></script>
+	  	<script src="javascripts/angular-ui-router.min.js"></script>
+	  	<script src="javascripts/angular-animate.min.js"></script>
+	  	<script src="javascripts/anim-in-out.js"></script>
+	  	<script src="javascripts/app.js"></script>
+
+	<!-- CONTROLLERS -->
 	</body>
 </html>
